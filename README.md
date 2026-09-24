@@ -1,4 +1,4 @@
-# Olist Delivery Pipeline
+# Olist E-commerce Delivery Performance and Fulfillment Delay Analysis
 
 ## 1. Project Overview
 This project transforms a one-time exploratory analysis of the Olist e-commerce dataset into a repeatable, dependable data pipeline. The pipeline ingests raw operational data, validates constraints, cleans safely, transforms into an order-level model, and publishes business metrics.
