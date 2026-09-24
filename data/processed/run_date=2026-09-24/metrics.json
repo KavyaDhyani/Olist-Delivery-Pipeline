@@ -1,0 +1,37 @@
+[
+    {
+        "metric": "Late delivery rate",
+        "value": 0.0812413664170501,
+        "denominator": 96281,
+        "definition": "Percentage of validated delivered orders arriving after the estimated delivery date.",
+        "calculation_run": "2026-09-24"
+    },
+    {
+        "metric": "Median delivery variance (days)",
+        "value": -11.92912037037037,
+        "denominator": 96281,
+        "definition": "Median days between actual delivery and estimated delivery. Positive means late.",
+        "calculation_run": "2026-09-24"
+    },
+    {
+        "metric": "Median purchase to carrier (days)",
+        "value": 2.2047916666666665,
+        "denominator": 96281,
+        "definition": "Median days from purchase to carrier handoff.",
+        "calculation_run": "2026-09-24"
+    },
+    {
+        "metric": "Median carrier to customer (days)",
+        "value": 7.100752314814815,
+        "denominator": 96281,
+        "definition": "Median days from carrier handoff to customer delivery.",
+        "calculation_run": "2026-09-24"
+    },
+    {
+        "metric": "Late delivery rate (Threshold Sellers)",
+        "value": 0.08086554074204987,
+        "denominator": 90533,
+        "definition": "Late delivery rate for orders involving sellers meeting the minimum delivered order threshold.",
+        "calculation_run": "2026-09-24"
+    }
+]

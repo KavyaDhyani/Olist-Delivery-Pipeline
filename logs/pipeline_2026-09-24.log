@@ -1,0 +1,37 @@
+2026-09-24 15:06:49,806 - olist_pipeline - INFO - Pipeline started for run_date: 2026-09-24
+2026-09-24 15:06:49,806 - olist_pipeline - INFO - Starting ingestion of raw CSV files...
+2026-09-24 15:06:49,917 - olist_pipeline - INFO - Loaded olist_customers_dataset.csv: 99441 rows
+2026-09-24 15:06:50,304 - olist_pipeline - INFO - Loaded olist_geolocation_dataset.csv: 1000163 rows
+2026-09-24 15:06:50,436 - olist_pipeline - INFO - Loaded olist_order_items_dataset.csv: 112650 rows
+2026-09-24 15:06:50,484 - olist_pipeline - INFO - Loaded olist_order_payments_dataset.csv: 103886 rows
+2026-09-24 15:06:50,658 - olist_pipeline - INFO - Loaded olist_order_reviews_dataset.csv: 99224 rows
+2026-09-24 15:06:50,843 - olist_pipeline - INFO - Loaded olist_orders_dataset.csv: 99441 rows
+2026-09-24 15:06:50,864 - olist_pipeline - INFO - Loaded olist_products_dataset.csv: 32951 rows
+2026-09-24 15:06:50,868 - olist_pipeline - INFO - Loaded olist_sellers_dataset.csv: 3095 rows
+2026-09-24 15:06:50,869 - olist_pipeline - INFO - Loaded product_category_name_translation.csv: 71 rows
+2026-09-24 15:06:50,869 - olist_pipeline - INFO - Starting validation checks...
+2026-09-24 15:06:51,449 - olist_pipeline - WARNING - Validation WARN: 166 chronological violations (carrier < purchase).
+2026-09-24 15:06:51,450 - olist_pipeline - INFO - Starting data cleaning...
+2026-09-24 15:06:51,503 - olist_pipeline - INFO - Populating SQLite database at /home/kavya/FDE/olist-delivery-pipeline/data/staging/olist.db...
+2026-09-24 15:06:51,640 - olist_pipeline - INFO - Created table olist_customers_dataset with 99441 rows in SQLite.
+2026-09-24 15:06:52,633 - olist_pipeline - INFO - Created table olist_geolocation_dataset with 1000163 rows in SQLite.
+2026-09-24 15:06:52,793 - olist_pipeline - INFO - Created table olist_order_items_dataset with 112650 rows in SQLite.
+2026-09-24 15:06:52,891 - olist_pipeline - INFO - Created table olist_order_payments_dataset with 103886 rows in SQLite.
+2026-09-24 15:06:53,877 - olist_pipeline - INFO - Created table olist_order_reviews_dataset with 99224 rows in SQLite.
+2026-09-24 15:06:54,415 - olist_pipeline - INFO - Created table olist_orders_dataset with 99441 rows in SQLite.
+2026-09-24 15:06:54,461 - olist_pipeline - INFO - Created table olist_products_dataset with 32951 rows in SQLite.
+2026-09-24 15:06:54,472 - olist_pipeline - INFO - Created table olist_sellers_dataset with 3095 rows in SQLite.
+2026-09-24 15:06:54,481 - olist_pipeline - INFO - Created table product_category_name_translation with 71 rows in SQLite.
+2026-09-24 15:06:54,481 - olist_pipeline - INFO - Executing SQL retrieval for completeness demonstration...
+2026-09-24 15:06:54,783 - olist_pipeline - INFO - SQL retrieval extracted 99441 order aggregations.
+2026-09-24 15:06:54,783 - olist_pipeline - INFO - Starting order-level transformation...
+2026-09-24 15:06:54,784 - olist_pipeline - INFO - Integrating SQL-derived order item features...
+2026-09-24 15:06:55,073 - olist_pipeline - INFO - Applying seller threshold of 10
+2026-09-24 15:06:59,588 - olist_pipeline - INFO - Transformation complete. Resulting order_features has 99441 rows.
+2026-09-24 15:06:59,588 - olist_pipeline - INFO - Calculating business metrics...
+2026-09-24 15:06:59,596 - olist_pipeline - INFO - Calculated 5 metrics for population of 96281.
+2026-09-24 15:06:59,596 - olist_pipeline - INFO - Publishing pipeline outputs...
+2026-09-24 15:07:00,407 - olist_pipeline - INFO - Published order_features.csv to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-24
+2026-09-24 15:07:00,407 - olist_pipeline - INFO - Published metrics.json to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-24
+2026-09-24 15:07:00,407 - olist_pipeline - INFO - Published validation_report.json to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-24
+2026-09-24 15:07:00,407 - olist_pipeline - INFO - Pipeline completed successfully.

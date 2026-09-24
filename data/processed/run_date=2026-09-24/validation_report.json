@@ -1,0 +1,43 @@
+[
+    {
+        "check_name": "orders_uniqueness",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "olist_orders_dataset_schema",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "olist_order_items_dataset_schema",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "olist_order_payments_dataset_schema",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "freshness",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "fk_items_orders",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "fk_payments_orders",
+        "severity": "PASS",
+        "status": "PASS"
+    },
+    {
+        "check_name": "chrono_carrier",
+        "severity": "WARN",
+        "status": "FAIL",
+        "message": "166 orders with carrier before purchase."
+    }
+]

@@ -1,0 +1,16 @@
+2026-09-24 15:08:09,533 - olist_pipeline - INFO - Pipeline started for run_date: 2026-09-25
+2026-09-24 15:08:09,533 - olist_pipeline - INFO - Chaos mode enabled: missing_column
+2026-09-24 15:08:09,533 - olist_pipeline - INFO - Starting ingestion of raw CSV files...
+2026-09-24 15:08:09,631 - olist_pipeline - INFO - Loaded olist_customers_dataset.csv: 99441 rows
+2026-09-24 15:08:10,012 - olist_pipeline - INFO - Loaded olist_geolocation_dataset.csv: 1000163 rows
+2026-09-24 15:08:10,140 - olist_pipeline - INFO - Loaded olist_order_items_dataset.csv: 112650 rows
+2026-09-24 15:08:10,187 - olist_pipeline - INFO - Loaded olist_order_payments_dataset.csv: 103886 rows
+2026-09-24 15:08:10,353 - olist_pipeline - INFO - Loaded olist_order_reviews_dataset.csv: 99224 rows
+2026-09-24 15:08:10,534 - olist_pipeline - INFO - Loaded olist_orders_dataset.csv: 99441 rows
+2026-09-24 15:08:10,556 - olist_pipeline - INFO - Loaded olist_products_dataset.csv: 32951 rows
+2026-09-24 15:08:10,561 - olist_pipeline - INFO - Loaded olist_sellers_dataset.csv: 3095 rows
+2026-09-24 15:08:10,562 - olist_pipeline - INFO - Loaded product_category_name_translation.csv: 71 rows
+2026-09-24 15:08:10,563 - olist_pipeline - INFO - Starting validation checks...
+2026-09-24 15:08:10,575 - olist_pipeline - ERROR - Validation FAIL: olist_orders_dataset missing ['order_status']
+2026-09-24 15:08:11,149 - olist_pipeline - WARNING - Validation WARN: 166 chronological violations (carrier < purchase).
+2026-09-24 15:08:11,149 - olist_pipeline - ERROR - Critical validation failure detected. Pipeline stopping before publish.

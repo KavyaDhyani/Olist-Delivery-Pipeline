@@ -1,0 +1,40 @@
+2026-09-24 15:08:56,048 - olist_pipeline - INFO - Pipeline started for run_date: 2026-09-26
+2026-09-24 15:08:56,048 - olist_pipeline - INFO - Chaos mode enabled: duplicate_order
+2026-09-24 15:08:56,048 - olist_pipeline - INFO - Starting ingestion of raw CSV files...
+2026-09-24 15:08:56,139 - olist_pipeline - INFO - Loaded olist_customers_dataset.csv: 99441 rows
+2026-09-24 15:08:56,497 - olist_pipeline - INFO - Loaded olist_geolocation_dataset.csv: 1000163 rows
+2026-09-24 15:08:56,616 - olist_pipeline - INFO - Loaded olist_order_items_dataset.csv: 112650 rows
+2026-09-24 15:08:56,662 - olist_pipeline - INFO - Loaded olist_order_payments_dataset.csv: 103886 rows
+2026-09-24 15:08:56,830 - olist_pipeline - INFO - Loaded olist_order_reviews_dataset.csv: 99224 rows
+2026-09-24 15:08:57,013 - olist_pipeline - INFO - Loaded olist_orders_dataset.csv: 99441 rows
+2026-09-24 15:08:57,033 - olist_pipeline - INFO - Loaded olist_products_dataset.csv: 32951 rows
+2026-09-24 15:08:57,035 - olist_pipeline - INFO - Loaded olist_sellers_dataset.csv: 3095 rows
+2026-09-24 15:08:57,036 - olist_pipeline - INFO - Loaded product_category_name_translation.csv: 71 rows
+2026-09-24 15:08:57,037 - olist_pipeline - INFO - Starting validation checks...
+2026-09-24 15:08:57,050 - olist_pipeline - WARNING - Validation WARN: Found 1 duplicate order_ids.
+2026-09-24 15:08:57,621 - olist_pipeline - WARNING - Validation WARN: 166 chronological violations (carrier < purchase).
+2026-09-24 15:08:57,621 - olist_pipeline - INFO - Starting data cleaning...
+2026-09-24 15:08:57,639 - olist_pipeline - INFO - Cleaned 1 duplicate orders.
+2026-09-24 15:08:57,687 - olist_pipeline - INFO - Populating SQLite database at /home/kavya/FDE/olist-delivery-pipeline/data/staging/olist.db...
+2026-09-24 15:08:57,829 - olist_pipeline - INFO - Created table olist_customers_dataset with 99441 rows in SQLite.
+2026-09-24 15:08:58,893 - olist_pipeline - INFO - Created table olist_geolocation_dataset with 1000163 rows in SQLite.
+2026-09-24 15:08:59,090 - olist_pipeline - INFO - Created table olist_order_items_dataset with 112650 rows in SQLite.
+2026-09-24 15:08:59,202 - olist_pipeline - INFO - Created table olist_order_payments_dataset with 103886 rows in SQLite.
+2026-09-24 15:08:59,407 - olist_pipeline - INFO - Created table olist_order_reviews_dataset with 99224 rows in SQLite.
+2026-09-24 15:09:00,025 - olist_pipeline - INFO - Created table olist_orders_dataset with 99441 rows in SQLite.
+2026-09-24 15:09:00,081 - olist_pipeline - INFO - Created table olist_products_dataset with 32951 rows in SQLite.
+2026-09-24 15:09:00,099 - olist_pipeline - INFO - Created table olist_sellers_dataset with 3095 rows in SQLite.
+2026-09-24 15:09:00,110 - olist_pipeline - INFO - Created table product_category_name_translation with 71 rows in SQLite.
+2026-09-24 15:09:00,110 - olist_pipeline - INFO - Executing SQL retrieval for completeness demonstration...
+2026-09-24 15:09:00,413 - olist_pipeline - INFO - SQL retrieval extracted 99441 order aggregations.
+2026-09-24 15:09:00,413 - olist_pipeline - INFO - Starting order-level transformation...
+2026-09-24 15:09:00,415 - olist_pipeline - INFO - Integrating SQL-derived order item features...
+2026-09-24 15:09:00,732 - olist_pipeline - INFO - Applying seller threshold of 10
+2026-09-24 15:09:06,338 - olist_pipeline - INFO - Transformation complete. Resulting order_features has 99441 rows.
+2026-09-24 15:09:06,338 - olist_pipeline - INFO - Calculating business metrics...
+2026-09-24 15:09:06,347 - olist_pipeline - INFO - Calculated 5 metrics for population of 96281.
+2026-09-24 15:09:06,347 - olist_pipeline - INFO - Publishing pipeline outputs...
+2026-09-24 15:09:07,180 - olist_pipeline - INFO - Published order_features.csv to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-26
+2026-09-24 15:09:07,180 - olist_pipeline - INFO - Published metrics.json to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-26
+2026-09-24 15:09:07,181 - olist_pipeline - INFO - Published validation_report.json to /home/kavya/FDE/olist-delivery-pipeline/data/processed/run_date=2026-09-26
+2026-09-24 15:09:07,181 - olist_pipeline - INFO - Pipeline completed successfully.
