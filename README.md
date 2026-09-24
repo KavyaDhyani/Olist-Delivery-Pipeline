@@ -164,4 +164,4 @@ The analysis can help identify where further operational investigation should be
 
 A lightweight business-facing dashboard presents the final delivery-performance metrics and validation findings produced by the pipeline.
 
-[View the live dashboard](https://USERNAME.github.io/REPOSITORY/dashboard/index.html)
+[View the live dashboard](https://USERNAME.github.io/REPOSITORY/index.html)
