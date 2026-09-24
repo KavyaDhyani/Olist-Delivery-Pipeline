@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olist Delivery Performance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <h1>Olist Delivery Performance</h1>
+            <p class="subtitle">Validated operational metrics from the Olist fulfillment pipeline</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="metrics-grid">
+            <div class="metric-card highlight">
+                <h3>Late Delivery Rate</h3>
+                <div class="metric-value" id="val-late-rate">--</div>
+            </div>
+            <div class="metric-card">
+                <h3>Median Delivery Variance</h3>
+                <div class="metric-value" id="val-variance">--</div>
+                <div class="metric-subtext">Negative = Delivered early</div>
+            </div>
+            <div class="metric-card">
+                <h3>Purchase &rarr; Carrier</h3>
+                <div class="metric-value" id="val-p2c">--</div>
+            </div>
+            <div class="metric-card">
+                <h3>Carrier &rarr; Customer</h3>
+                <div class="metric-value" id="val-c2c">--</div>
+            </div>
+            <div class="metric-card highlight-alt">
+                <h3>Validated Orders</h3>
+                <div class="metric-value" id="val-population">--</div>
+            </div>
+        </section>
+
+        <div class="visualizations-grid">
+            <section class="viz-card">
+                <h2>Fulfillment Stage Duration</h2>
+                <div class="bar-chart-container">
+                    <div class="bar-row">
+                        <div class="bar-label">Purchase &rarr; Carrier</div>
+                        <div class="bar-track">
+                            <div class="bar-fill" id="bar-p2c"></div>
+                        </div>
+                        <div class="bar-value" id="text-p2c"></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Carrier &rarr; Customer</div>
+                        <div class="bar-track">
+                            <div class="bar-fill alt-fill" id="bar-c2c"></div>
+                        </div>
+                        <div class="bar-value" id="text-c2c"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="viz-card">
+                <h2>Delivery Performance</h2>
+                <div class="bar-chart-container">
+                    <div class="bar-row">
+                        <div class="bar-label">On-time</div>
+                        <div class="bar-track">
+                            <div class="bar-fill success-fill" id="bar-ontime"></div>
+                        </div>
+                        <div class="bar-value" id="text-ontime"></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">Late</div>
+                        <div class="bar-track">
+                            <div class="bar-fill danger-fill" id="bar-late"></div>
+                        </div>
+                        <div class="bar-value" id="text-late"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="info-grid">
+            <section class="info-card">
+                <h2>Validation Findings</h2>
+                <ul class="findings-list">
+                    <li><span class="anomaly-count">166</span> carrier-before-purchase chronology anomalies</li>
+                    <li><span class="anomaly-count">23</span> delivery-before-carrier chronology anomalies</li>
+                </ul>
+                <p>Invalid lifecycle timestamps are excluded from KPI calculations.</p>
+                <p>Raw records are retained and reported rather than silently deleted.</p>
+            </section>
+
+            <section class="info-card">
+                <h2>Decision Supported</h2>
+                <p>The dashboard supports operational investigation of delivery performance by showing the overall late-delivery rate and separating fulfillment into purchase-to-carrier and carrier-to-customer stages. It does not establish the causal reason for an individual delay.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="dashboard-footer">
+        <div class="container">
+            <p><strong>Methodology:</strong> KPI population: 96,281 delivered orders with complete required timestamps and a chronologically valid fulfillment sequence.</p>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

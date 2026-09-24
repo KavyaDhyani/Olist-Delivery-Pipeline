@@ -159,3 +159,9 @@ KPI metrics are calculated only on delivered orders with complete required times
 The output supports operational investigation of delivery performance by showing the overall late-delivery rate and separating the fulfillment process into purchase-to-carrier and carrier-to-customer stages.
 
 The analysis can help identify where further operational investigation should be focused. It does not determine the causal reason for an individual delay.
+
+## 29. Dashboard
+
+A lightweight business-facing dashboard presents the final delivery-performance metrics and validation findings produced by the pipeline.
+
+[View the live dashboard](https://USERNAME.github.io/REPOSITORY/dashboard/index.html)
